@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800);
+body {
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  color: #333; }
+
+a {
+  color: initial;
+  text-decoration: none; }
+
+p, blockquote, li {
+  font-size: 1em;
+  line-height: 1.5; }
+
+p {
+  margin: 0 0 1em 0; }
+  p:last-child, p:only-child {
+    margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: normal;
+  color: #222; }
+
+h1 {
+  font-size: 2em;
+  line-height: 1.2; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.3em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.9em; }
+
+h6 {
+  font-size: 0.8em; }
