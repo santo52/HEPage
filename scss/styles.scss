@@ -9,31 +9,29 @@
   $extra-bold : 800;
 
 // PALETA DE COLOR, modifique para su propia paleta de color
-  $azul        : steelblue;
-  $azul-oscuro : #255484;
-  $azul-claro  : lighten(steelblue,25%);
-  $negro       : #070D12;
-  $blanco      : #FDFDFD;
-  $gris        : #ccc;
-  $gris-oscuro : #444;
-  $gris-claro  : #f0f0f0;
-  $rojo        : darken(tomato,10);
+  $color-1     : #03617A;
+  $color-2     : #019B91;
+  $color-3     : #FFF;
+  $color-4     : #29504F;
+  $color-5     : #032F2E;
+  $color-6     : #1F5646;
+  $color-6     : #ABABAB;
 
 // ESTILOS BASE
-  $body--background  : #fff;                      // fondo para el body
+  $body--background  : #color-3;                      // fondo para el body
   $body--font-family : 'Open Sans', sans-serif;   // fuente predeterminada
   $body--color       : #333;                      // color de texto predeterminado
 
 // ESTILOS DE ENCABEZADOS
   $header--font-family    : 'Open Sans', sans-serif;  // fuente para los headers (h1,h2,h3...)
-  $header--font-weight    : $bold;                    // grosor de fuente para los headers
-  $header--text-transform : normal;                   // normal, uppercase, lowercase, capitalize
-  $header--color          : #222;                     // color predeterminado de los header
+  $header--font-weight    : $normal;                    // grosor de fuente para los headers
+  $header--text-transform : uppercase;                   // normal, uppercase, lowercase, capitalize
+  $header--color          : $color-2;                     // color predeterminado de los header
 
 // TAMAÑO DE LOS ENCABEZADOS (h1...h6)
-  $h1--font-size : 2em;
-  $h2--font-size : 1.6em;
-  $h3--font-size : 1.3em;
+  $h1--font-size : 3em;
+  $h2--font-size : 2em;
+  $h3--font-size : 1.2em;
   $h4--font-size : 1em;
   $h5--font-size : .9em;
   $h6--font-size : .8em;
@@ -49,8 +47,10 @@
 
 
   @import "base/base";
-  @import "tema/menus";
   @import "tema/header";
+  @import "tema/company";
+  @import "tema/menus";
   @import "tema/footer";
   @import "tema/main";
   @import "tema/aside";
+  @import "modulos/modulos";

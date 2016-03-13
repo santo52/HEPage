@@ -1,0 +1,41 @@
+.header{
+  background: #000;
+  width:100%;
+  height:100vh;
+  padding:0 14.0625%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a{
+    color: $color-6;
+  }
+
+  &_logo{
+    width:80%;
+    min-width:223px;
+  }
+
+  &_buttons{
+    display: flex;
+    margin:54px 0;
+    &_item{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      margin:0 10px;
+      width:40px;
+      height:40px;
+      padding: 5px;
+      border: 2px solid $color-6;
+
+      &:hover{
+        border-color: $color-2;
+        &:before{
+          color: $color-2;
+        }
+      }
+    }
+  }
+}

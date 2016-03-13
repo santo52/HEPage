@@ -1,4 +1,9 @@
-//Modifique los estilos base desde las variables
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
 body {
   background  : $body--background;
   font-family : $body--font-family;
@@ -61,3 +66,10 @@ h5 {
 h6 {
   font-size : $h6--font-size;
 }
+
+img{
+  width:100%;
+  height: auto;
+}
+
+@import "iconos";
