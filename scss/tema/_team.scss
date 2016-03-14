@@ -2,6 +2,7 @@
   background: $color-4;
   height:100vh;
   min-height: 700px;
+  overflow: hidden;
   &_title{
     text-align: center;
     height:10%;
@@ -16,7 +17,6 @@
       position: relative;
       width:120px;
       height:120px;
-
       .hexagon {
         position: absolute;
         width: 120px;
@@ -26,13 +26,16 @@
         background-position: center;
         &:hover .sub_hexagon{
           visibility: inherit;
+          .hexTop, .hexBottom{
+            transform: scale(1.4);
+          }
         }
     
         .sub_hexagon{
           position: absolute;
           z-index: 500;
           background-color: $color-4;
-          opacity: .95;
+          opacity: .90;
           cursor: pointer;
           top:-35px;
           visibility: hidden;
@@ -42,6 +45,7 @@
             text-align: center;
             position: absolute;
             top:-20px;
+            left:9px;
             z-index: 1000;
             color: white;
             &_name{

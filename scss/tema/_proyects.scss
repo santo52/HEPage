@@ -1,3 +1,117 @@
 .proyects{
+  text-align: center;
+  background: black;
+  min-height:100vh;
+  overflow: hidden;
+  &_title{
+    position: absolute;
+    top:-80px;
+    width:100%;
+    z-index: 800;
+    overflow: hidden;
+    text-align: center;
+    background: black;
+  }
+  &_container{
+    overflow: hidden;
+    position: relative;
+    top:100px;
+    height:900px;
+    background-image: url('http://www.todopaisajes.com/Imagenes/paisaje-rural-del-campo.jpg');
+    &_item{
+      position: absolute;
+      width:200%;
+      height:500px;
+      border: 5px solid black;
+      overflow: hidden;
+      opacity: .94;
+      div{
+        position: absolute;
+        width:100%;
+        height:100%;
+        background-attachment: inherit;
+      }
 
+      &:nth-child(2){
+        transform: rotate(0deg);
+        div{
+          transform: rotate(0deg);
+          background: url('http://3.bp.blogspot.com/-mWyznU_aLxg/T4sT9yb_C6I/AAAAAAAAARc/9ly-u0vbud0/s1600/Cuba-Paisaje-Natural_3.jpg') center bottom;
+
+        }
+      }
+
+      &:nth-child(3){
+        top:10rem;
+        z-index: 350;
+        transform: rotate(-30deg);
+
+        div{
+          background: url('http://radiodigitalamerica.com/wp-content/uploads/2016/01/Dise%C3%B1o-Gr%C3%A1fico-10-Preguntas-Radio-Digital-America.jpg') center top;
+        }
+      }
+
+      &:nth-child(4){
+        z-index: 350;
+        transform: rotate(-19deg);
+        top:25rem;
+        left:-100px;
+        div{
+          background: url(http://www.ediciona.com/portafolio/image/6/5/4/1/iria_1456.jpg) center bottom;
+        }
+      }
+
+      &:nth-child(5){
+        z-index: 300;
+        left: -350px;
+        height:500px;
+        transform: rotate(48deg);
+        top:10rem;
+        div{
+          background: url('http://mlv-s2-p.mlstatic.com/diseno-grafico-paginas-web-diseno-de-marcas-y-productos-17360-MLV20137046245_072014-F.jpg') center bottom;
+        }
+      }
+
+      &:nth-child(6){
+        z-index: 500;
+        transform: rotate(20deg);
+        top: 44rem;
+        left:-200px;
+        div{
+          background: url('http://saetaweb.com/site/wp-content/uploads/2012/11/serv-diseno-grafico.jpg') center bottom;
+        }
+      }
+/*
+      &:nth-child(3){
+        overflow: hidden;
+        transform: skew(-10deg);
+        z-index: 300;
+        top:200px;
+        div{
+          position: absolute;
+          width:100%;
+          height:100%;
+          transform: skew(10deg);
+          background-color: red;
+          background-image: url('http://www.todopaisajes.com/Imagenes/paisaje-rural-del-campo.jpg');
+          background-attachment: fixed;
+        }
+      }
+
+      &:nth-child(4){
+        overflow: hidden;
+        transform: skew(-80deg);
+        z-index: 300;
+        div{
+          position: absolute;
+          width:100%;
+          height:100%;
+          transform: skew(80deg);
+          background-color: red;
+          background-image: url('http://www.todopaisajes.com/Imagenes/paisaje-rural-del-campo.jpg');
+          background-attachment: fixed;
+        }
+      }*/
+    }
+  }
 }
