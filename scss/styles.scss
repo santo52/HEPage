@@ -56,13 +56,12 @@ $foto6  : "http://lorempixel.com/300/200/people/";
 
 
   @import "base/base";
+  @import "tema/iconos";
   @import "tema/header";
   @import "tema/company";
   @import "tema/team";
-
-
-  @import "tema/menus";
+  @import "tema/proyects";
   @import "tema/footer";
+
   @import "tema/main";
-  @import "tema/aside";
   @import "modulos/modulos";
