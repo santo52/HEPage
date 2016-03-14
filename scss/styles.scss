@@ -1,6 +1,15 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800);
 
+//fotos
+
+$foto1  : "http://lorempixel.com/300/200/people/";
+$foto2  : "http://lorempixel.com/300/200/people/";
+$foto3  : "http://lorempixel.com/300/200/people/";
+$foto4  : "http://lorempixel.com/300/200/people/";
+$foto5  : "http://lorempixel.com/300/200/people/";
+$foto6  : "http://lorempixel.com/300/200/people/";
+
 // Variables para aplicarlas en font-weight
   $light      : 300;
   $normal     : 400;
@@ -49,6 +58,9 @@
   @import "base/base";
   @import "tema/header";
   @import "tema/company";
+  @import "tema/team";
+
+
   @import "tema/menus";
   @import "tema/footer";
   @import "tema/main";
