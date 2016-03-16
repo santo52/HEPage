@@ -177,32 +177,59 @@ img {
       .company_acordeon_item:nth-child(odd) {
         background: #03617A; }
       .company_acordeon_item_title {
+        transition: all .5s ease;
         cursor: pointer;
         padding: .5em; }
         .company_acordeon_item_title div {
-          display: none; }
+          transition: all .5s ease;
+          font-size: 0;
+          height: 0;
+          overflow: hidden;
+          padding-top: 0; }
+          .company_acordeon_item_title div:before {
+            transition: all .5s ease;
+            color: #FFF;
+            font-size: 0; }
         .company_acordeon_item_title h3 {
+          transition: all 1s linear;
+          font-weight: 400;
           color: #FFF; }
       .company_acordeon_item_description {
-        display: none; }
+        transition: all 1s ease;
+        opacity: 0;
+        overflow: hidden;
+        margin: 0;
+        height: 0;
+        font-size: 1rem; }
+        .company_acordeon_item_description_slogan {
+          transition: all 1s ease;
+          font-size: 0;
+          opacity: 0; }
     .company_acordeon .visible {
       padding: 5px 20px; }
       .company_acordeon .visible .company_acordeon_item_title {
+        transition: all .5s ease;
         font-size: 1.7rem;
         line-height: 2.5rem; }
         .company_acordeon .visible .company_acordeon_item_title div {
-          display: block;
+          transition: all 1s ease;
+          padding-top: 10px;
+          height: auto;
           margin-bottom: 0.5rem; }
           .company_acordeon .visible .company_acordeon_item_title div:before {
-            color: #FFF;
+            transition: all 1s ease;
             font-size: 4rem; }
         .company_acordeon .visible .company_acordeon_item_title h3 {
-          font-weight: 300; }
+          transition: all 1s ease; }
       .company_acordeon .visible .company_acordeon_item_description {
-        margin-bottom: 30px;
-        display: block; }
+        transition: all 1s ease;
+        height: auto;
+        opacity: 1;
+        margin-bottom: 30px; }
         .company_acordeon .visible .company_acordeon_item_description_slogan {
+          transition: all 1s ease;
           font-size: 1.5rem;
+          opacity: 1;
           font-style: italic; }
 
 .team {
@@ -429,8 +456,87 @@ img {
         .proyects_container_item:nth-child(6) div {
           background: url("http://saetaweb.com/site/wp-content/uploads/2012/11/serv-diseno-grafico.jpg") center bottom; }
 
+.customers {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  overflow: hidden; }
+  .customers_container {
+    height: 100px;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 50px 0 100px;
+    background: red url("../img/logos.png") left;
+    -webkit-animation: 10s infinite linear;
+            animation: 10s infinite linear; }
+
+.right {
+  -webkit-animation-name: slider-right;
+          animation-name: slider-right; }
+
+.left {
+  -webkit-animation-name: slider-left;
+          animation-name: slider-left; }
+
+@-webkit-keyframes slider-right {
+  100% {
+    background-position: 2050px; } }
+
+@keyframes slider-right {
+  100% {
+    background-position: 2050px; } }
+
+@-webkit-keyframes slider-left {
+  100% {
+    background-position: -2050px; } }
+
+@keyframes slider-left {
+  100% {
+    background-position: -2050px; } }
+
+.footer {
+  text-align: center;
+  background: #03617A;
+  color: white;
+  padding-top: 20px;
+  font-size: .8rem; }
+  .footer_title {
+    font-weight: 700;
+    display: inline-block; }
+  .footer_copy {
+    display: inline-block; }
+  .footer_credits {
+    font-size: 7px;
+    color: #03617A; }
+    .footer_credits a {
+      color: #03617A; }
+
 a.active {
   color: #019B91; }
 
-.visible {
-  display: block; }
+.fixedMenu {
+  position: fixed !important;
+  top: -42px !important;
+  right: 2px !important;
+  z-index: 5000 !important;
+  -webkit-animation: enlargeMenu 1s 1;
+          animation: enlargeMenu 1s 1; }
+
+@-webkit-keyframes enlargeMenu {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes enlargeMenu {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }

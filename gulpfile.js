@@ -17,7 +17,7 @@ var gulp = require('gulp'),
  * de las tareas watch, un ejemplo de uso sería:
  * PORT=8080 gulp watch:all
  */
- var PORT = process.env.PORT || 7070;
+ var PORT = process.env.PORT || 8080;
 
 
 /**

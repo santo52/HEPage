@@ -1,0 +1,36 @@
+.customers{
+  min-height:100vh;
+  width:100%;
+  text-align: center;
+  padding: 10px 0;
+  overflow: hidden;
+  &_container{
+    height:100px;
+    width:100%;
+    display: flex;
+    margin: 50px 0 100px;
+    background: red url("../img/logos.png") left;
+    animation: 10s infinite linear;
+  }
+}
+
+.right{
+  animation-name: slider-right;
+}
+
+.left{
+  animation-name: slider-left;
+}
+
+@keyframes slider-right {
+  100%{
+    background-position: 2050px;
+  }
+}
+
+
+@keyframes slider-left {
+  100%{
+    background-position: -2050px;
+  }
+}

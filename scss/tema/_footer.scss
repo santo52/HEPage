@@ -1,0 +1,22 @@
+.footer{
+  text-align: center;
+  background: $color-1;
+  color: white;
+  padding-top: 20px;
+  font-size: .8rem;
+
+  &_title{
+    font-weight:$bold;
+    display: inline-block;
+  }
+  &_copy{
+    display: inline-block;
+  }
+  &_credits{
+    font-size:7px;
+    color: $color-1;
+    & a{
+      color: $color-1;
+    }
+  }
+}

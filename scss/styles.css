@@ -159,32 +159,59 @@ img {
       .company_acordeon_item:nth-child(odd) {
         background: #03617A; }
       .company_acordeon_item_title {
+        transition: all .5s ease;
         cursor: pointer;
         padding: .5em; }
         .company_acordeon_item_title div {
-          display: none; }
+          transition: all .5s ease;
+          font-size: 0;
+          height: 0;
+          overflow: hidden;
+          padding-top: 0; }
+          .company_acordeon_item_title div:before {
+            transition: all .5s ease;
+            color: #FFF;
+            font-size: 0; }
         .company_acordeon_item_title h3 {
+          transition: all 1s linear;
+          font-weight: 400;
           color: #FFF; }
       .company_acordeon_item_description {
-        display: none; }
+        transition: all 1s ease;
+        opacity: 0;
+        overflow: hidden;
+        margin: 0;
+        height: 0;
+        font-size: 1rem; }
+        .company_acordeon_item_description_slogan {
+          transition: all 1s ease;
+          font-size: 0;
+          opacity: 0; }
     .company_acordeon .visible {
       padding: 5px 20px; }
       .company_acordeon .visible .company_acordeon_item_title {
+        transition: all .5s ease;
         font-size: 1.7rem;
         line-height: 2.5rem; }
         .company_acordeon .visible .company_acordeon_item_title div {
-          display: block;
+          transition: all 1s ease;
+          padding-top: 10px;
+          height: auto;
           margin-bottom: 0.5rem; }
           .company_acordeon .visible .company_acordeon_item_title div:before {
-            color: #FFF;
+            transition: all 1s ease;
             font-size: 4rem; }
         .company_acordeon .visible .company_acordeon_item_title h3 {
-          font-weight: 300; }
+          transition: all 1s ease; }
       .company_acordeon .visible .company_acordeon_item_description {
-        margin-bottom: 30px;
-        display: block; }
+        transition: all 1s ease;
+        height: auto;
+        opacity: 1;
+        margin-bottom: 30px; }
         .company_acordeon .visible .company_acordeon_item_description_slogan {
+          transition: all 1s ease;
           font-size: 1.5rem;
+          opacity: 1;
           font-style: italic; }
 
 .team {
@@ -309,44 +336,155 @@ img {
   text-align: center;
   background: black;
   min-height: 100vh;
-  height: 1100px;
   overflow: hidden; }
+  .proyects_title {
+    position: absolute;
+    top: -80px;
+    width: 100%;
+    z-index: 800;
+    overflow: hidden;
+    text-align: center;
+    background: black; }
   .proyects_container {
+    overflow: hidden;
     position: relative;
     top: 100px;
-    height: 100%;
-    z-index: 2000; }
-    .proyects_container_title {
-      position: absolute;
-      top: -80px;
-      z-index: 500;
-      width: 100%;
-      overflow: hidden;
-      text-align: center;
-      background: black; }
+    height: 900px;
+    background-image: url("http://www.todopaisajes.com/Imagenes/paisaje-rural-del-campo.jpg"); }
     .proyects_container_item {
-      overflow: hidden;
-      outline: 10px solid black;
       position: absolute;
-      z-index: 100;
-      width: 200px;
+      width: 200%;
       height: 500px;
-      background-color: red; }
-      .proyects_container_item:nth-child(2) div {
-        background-color: red; }
-      .proyects_container_item:nth-child(3) div {
-        background-color: red; }
-      .proyects_container_item:nth-child(4) div {
-        background-color: red; }
-      .proyects_container_item:nth-child(5) div {
-        background-color: red; }
-      .proyects_container_item:nth-child(6) div {
-        background-color: red; }
+      border: 5px solid black;
+      overflow: hidden;
+      opacity: .94;
+      /*
+            &:nth-child(3){
+              overflow: hidden;
+              transform: skew(-10deg);
+              z-index: 300;
+              top:200px;
+              div{
+                position: absolute;
+                width:100%;
+                height:100%;
+                transform: skew(10deg);
+                background-color: red;
+                background-image: url('http://www.todopaisajes.com/Imagenes/paisaje-rural-del-campo.jpg');
+                background-attachment: fixed;
+              }
+            }
+      
+            &:nth-child(4){
+              overflow: hidden;
+              transform: skew(-80deg);
+              z-index: 300;
+              div{
+                position: absolute;
+                width:100%;
+                height:100%;
+                transform: skew(80deg);
+                background-color: red;
+                background-image: url('http://www.todopaisajes.com/Imagenes/paisaje-rural-del-campo.jpg');
+                background-attachment: fixed;
+              }
+            }*/ }
+      .proyects_container_item div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-attachment: inherit; }
+      .proyects_container_item:nth-child(2) {
+        transform: rotate(0deg); }
+        .proyects_container_item:nth-child(2) div {
+          transform: rotate(0deg);
+          background: url("http://3.bp.blogspot.com/-mWyznU_aLxg/T4sT9yb_C6I/AAAAAAAAARc/9ly-u0vbud0/s1600/Cuba-Paisaje-Natural_3.jpg") center bottom; }
+      .proyects_container_item:nth-child(3) {
+        top: 10rem;
+        z-index: 350;
+        transform: rotate(-30deg); }
+        .proyects_container_item:nth-child(3) div {
+          background: url("http://radiodigitalamerica.com/wp-content/uploads/2016/01/Dise%C3%B1o-Gr%C3%A1fico-10-Preguntas-Radio-Digital-America.jpg") center top; }
+      .proyects_container_item:nth-child(4) {
+        z-index: 350;
+        transform: rotate(-19deg);
+        top: 25rem;
+        left: -100px; }
+        .proyects_container_item:nth-child(4) div {
+          background: url(http://www.ediciona.com/portafolio/image/6/5/4/1/iria_1456.jpg) center bottom; }
+      .proyects_container_item:nth-child(5) {
+        z-index: 300;
+        left: -350px;
+        height: 500px;
+        transform: rotate(48deg);
+        top: 10rem; }
+        .proyects_container_item:nth-child(5) div {
+          background: url("http://mlv-s2-p.mlstatic.com/diseno-grafico-paginas-web-diseno-de-marcas-y-productos-17360-MLV20137046245_072014-F.jpg") center bottom; }
+      .proyects_container_item:nth-child(6) {
+        z-index: 500;
+        transform: rotate(20deg);
+        top: 44rem;
+        left: -200px; }
+        .proyects_container_item:nth-child(6) div {
+          background: url("http://saetaweb.com/site/wp-content/uploads/2012/11/serv-diseno-grafico.jpg") center bottom; }
+
+.customers {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  overflow: hidden; }
+  .customers_container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    margin: 50px 0 100px;
+    background: red url("../img/logos.png") left;
+    animation: 10s infinite linear; }
+
+.right {
+  animation-name: slider-right; }
+
+.left {
+  animation-name: slider-left; }
+
+@keyframes slider-right {
+  100% {
+    background-position: 2050px; } }
+@keyframes slider-left {
+  100% {
+    background-position: -2050px; } }
+.footer {
+  text-align: center;
+  background: #03617A;
+  color: white;
+  padding-top: 20px;
+  font-size: .8rem; }
+  .footer_title {
+    font-weight: 700;
+    display: inline-block; }
+  .footer_copy {
+    display: inline-block; }
+  .footer_credits {
+    font-size: 7px;
+    color: #03617A; }
+    .footer_credits a {
+      color: #03617A; }
 
 a.active {
   color: #019B91; }
 
-.visible {
-  display: block; }
+.fixedMenu {
+  position: fixed !important;
+  top: -42px !important;
+  right: 2px !important;
+  z-index: 5000 !important;
+  animation: enlargeMenu 1s 1; }
+
+@keyframes enlargeMenu {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
 
 /*# sourceMappingURL=styles.css.map */

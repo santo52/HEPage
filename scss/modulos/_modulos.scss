@@ -1,7 +1,19 @@
 a.active{
   color: $color-2;
 }
+.fixedMenu{
+  position: fixed !important;
+  top:-42px !important;
+  right: 2px !important;
+  z-index: 5000 !important;
+  animation: enlargeMenu 1s 1;
+}
 
-.visible{
-  display:block;
+@keyframes  enlargeMenu{
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
 }
