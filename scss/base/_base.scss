@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin:0;
   padding: 0;
-  //prueba
 }
 
 body {
@@ -14,6 +13,9 @@ body {
 a {
   color           : $link--color;
   text-decoration : none;
+}
+a:focus{
+  outline: none;
 }
 
 p, blockquote, li {

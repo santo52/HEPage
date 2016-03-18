@@ -3,12 +3,12 @@
 
 //fotos
 
-$foto1  : "http://lorempixel.com/300/200/people/";
-$foto2  : "http://lorempixel.com/300/200/people/";
-$foto3  : "http://lorempixel.com/300/200/people/";
-$foto4  : "http://lorempixel.com/300/200/people/";
-$foto5  : "http://lorempixel.com/300/200/people/";
-$foto6  : "http://lorempixel.com/300/200/people/";
+$foto1  : "http://lorempixel.com/400/400/people/9";
+$foto2  : "http://lorempixel.com/400/400/people/2";
+$foto3  : "http://lorempixel.com/400/400/people/3";
+$foto4  : "http://lorempixel.com/400/400/people/4";
+$foto5  : "http://lorempixel.com/400/400/people/5";
+$foto6  : "http://lorempixel.com/400/400/people/6";
 
 // Variables para aplicarlas en font-weight
   $light      : 300;
@@ -63,6 +63,8 @@ $foto6  : "http://lorempixel.com/300/200/people/";
   @import "tema/proyects";
   @import "tema/customers";
   @import "tema/footer";
-
+  @import "tema/pestanas";
+  @import "tema/animations";
+  @import "tema/mediaQueries";
   @import "tema/main";
   @import "modulos/modulos";
