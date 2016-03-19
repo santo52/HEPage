@@ -1,5 +1,16 @@
 .header{
+  display: flex;
   min-height: 100vh;
+  width:100%;
+  padding:0 14.0625%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+
+  a{
+    color: $color-6;
+  }
 
   .contact,
   .menu,
@@ -11,6 +22,34 @@
     display:flex;
   }
 
+  &_logo{
+    width:80%;
+    min-width:223px;
+    margin-bottom:54px;
+  }
+
+  &_buttons{
+    display: flex;
+    margin-bottom:54px;
+    &_item{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      margin:0 10px;
+      width:40px;
+      height:40px;
+      padding: 5px;
+      border: 2px solid $color-6;
+
+      &:hover{
+        border-color: $color-2;
+        &:before{
+          color: $color-2;
+        }
+      }
+    }
+  }
+
   .contact, .menu{
     width: 100%;
     position: fixed;
@@ -19,6 +58,7 @@
     color: white;
     top:0;
     .pestana{
+      visibility: hidden;
       cursor: pointer;
       height: 385px;
       font-weight: $semi-bold;
@@ -50,29 +90,6 @@
     .labels{
       align-items: center;
       padding: 22px;
-    }
-  }
-
-  .centro{
-    height: 100vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    a{
-      color: #aaa;
-      &:hover{
-        color:$color-2;
-      }
-    }
-    &__idioma, &__icono{
-      margin-top: 60px;
-    }
-
-    &__icono{
-      a{
-        &:before{font-size: 2.5em !important;margin-right: 22px;}
-      }
     }
   }
 
@@ -202,48 +219,6 @@
             flex-grow: 0;
             min-width: 133px;
           }
-        }
-      }
-    }
-  }
-}
-
-.header{
-  background: #000;
-  width:100%;
-  height:100vh;
-  padding:0 14.0625%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  a{
-    color: $color-6;
-  }
-
-  &_logo{
-    width:80%;
-    min-width:223px;
-  }
-
-  &_buttons{
-    display: flex;
-    margin:54px 0;
-    &_item{
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      margin:0 10px;
-      width:40px;
-      height:40px;
-      padding: 5px;
-      border: 2px solid $color-6;
-
-      &:hover{
-        border-color: $color-2;
-        &:before{
-          color: $color-2;
         }
       }
     }

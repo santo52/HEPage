@@ -19,19 +19,6 @@ $document.on('scroll', function(){
     }
 });
 
-
-$closeTab.on('click', function(){
-    $(this).parent().removeClass('slideShow');
-});
-
-$menuButton.on('click', function(){
-    $('.menu').addClass('slideShow');
-});
-
-$contactButton.on('click', function(){
-    $('.contact').addClass('slideShow');
-});
-
 var contact = $('.contact');
 var menu = $('.menu');
 
@@ -42,22 +29,22 @@ var menu = $('.menu');
 //***************************//
 
 $('.contact .pestana').click(function(){
-    contact.css('z-index', '20').animate({right: "0", border: 0}, 1000);
+    contact.css('z-index', '5000').animate({right: "0", border: 0}, 1000);
     $('html').css('overflow', 'hidden');
 });
 
 $('.contact .labels').on('click', 'a', function(){
-    contact.css('z-index', '0').animate({right: "-99.5%"}, 1000).css('border-left', '10px solid #009B93');
+    contact.css('z-index', '3000').animate({right: "-99.5%"}, 1000).css('border-left', '10px solid #009B93');
     $('html').css('overflow-y', 'scroll');
 })
 
 $('.menu .pestana').click(function(){
-    menu.css('z-index', '20').animate({left: "0", border: 0}, 1000);
+    menu.css('z-index', '5000').animate({left: "0", border: 0}, 1000);
     $('html').css('overflow', 'hidden');
 });
 
 $('.menu .labels').on('click', 'a', function(){
-    menu.css('z-index', '0').animate({left: "-99.5%"}, 1000).css('border-right', '10px solid #00637A');
+    menu.css('z-index', '3000').animate({left: "-99.5%"}, 1000).css('border-right', '10px solid #00637A');
     $('html').css('overflow-y', 'scroll');
 })
 
