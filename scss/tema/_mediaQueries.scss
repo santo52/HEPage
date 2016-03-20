@@ -37,6 +37,91 @@
   }
 }
 
+@media screen and (min-width: 600px){
+  .team{
+    height: 1200px;
+  }
+  .team_container{
+    height: 60%;
+    &_hexagons {
+      width: 200px;
+      height: 200px;
+      .hexagon {
+        width: 200px;
+        height: 115.47px;
+        margin: 57.74px 0;
+        background-size: auto 230.9401px;
+
+        .sub_hexagon_text{
+            font-size: 1.1rem;
+            top:-25px;
+
+            &_icon:before{
+              font-size: 5rem;
+            }
+        }
+
+        .hexTop,
+        .hexBottom {
+          width: 141.42px;
+          height: 141.42px;
+          left: 29.29px;
+        }
+
+        .hexTop:after,
+        .hexBottom:after {
+          width: 200.0000px;
+          height: 115.47005383792516px;
+          -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+          -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+          transform: rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+        }
+
+        .hexTop {
+          top: -70.7107px;
+        }
+
+        .hexBottom {
+          bottom: -70.7107px;
+        }
+
+        .hexagon:after {
+          width: 200px;
+          height: 115.4701px;
+        }
+      }
+
+      $positionTop: 240px;
+      $positionLeft: 137px;
+
+      > .hexagon:nth-child(2) {
+        top: -$positionTop;
+        left: -$positionLeft;
+      }
+
+      > .hexagon:nth-child(3) {
+        top: -$positionTop;
+        left: $positionLeft;
+      }
+
+      > .hexagon:nth-child(4) {
+        top: $positionTop;
+        left: -$positionLeft;
+      }
+
+      > .hexagon:nth-child(5) {
+        top: $positionTop;
+        left: $positionLeft;
+      }
+
+      > .hexagon:nth-child(6) {
+        top: $positionTop*2;
+        left: 0;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 768px){
   .menu{
     .items{
