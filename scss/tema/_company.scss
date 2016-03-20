@@ -1,7 +1,6 @@
 .company{
   text-align: center;
   &_description{
-    margin-bottom: 30px;
     padding: 30px;
     padding-top: 0;
     &_title{
@@ -13,13 +12,12 @@
     font-weight:$light;
     padding:15px;
     color: $color-3;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
     &_item{
-      max-width: 480px;
+      overflow: hidden;
+      max-width: 480px !important;
       background: $color-2;
-      margin-bottom:15px;
+      margin:8px auto;
       &:nth-child(odd){
         background: $color-1;
       }
@@ -33,7 +31,7 @@
           overflow: hidden;
           padding-top: 0;
           &:before{
-            transition:all .3s ease;
+            //transition:all .1s ease;
             color: $color-3;
             font-size: 0;
           }
@@ -45,20 +43,26 @@
         }
       }
       &_description{
-        transition:all 1s ease;
+        transition:opacity .3s ease;
         opacity: 0;
         overflow: hidden;
         margin: 0;
         height: 0;
         font-size: 1rem;
         &_slogan{
-          transition:all 1s ease;
+          transition:opacity .3s ease;
           opacity: 0;
           font-size: 1.5rem;
+          font-style: italic;
         }
       }
     }
-
+    .left{
+      margin-left: 395px;
+    }
+    .right{
+      margin-right: 395px;
+    }
     .visible{
       padding: 5px 20px;
       .company_acordeon_item{
@@ -83,7 +87,6 @@
           margin-bottom: 30px;
           &_slogan{
             opacity: 1;
-            font-style: italic;
           }
         }
       }

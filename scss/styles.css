@@ -255,7 +255,6 @@ textarea {
 .company {
   text-align: center; }
   .company_description {
-    margin-bottom: 30px;
     padding: 30px;
     padding-top: 0; }
     .company_description_title {
@@ -263,14 +262,12 @@ textarea {
   .company_acordeon {
     font-weight: 300;
     padding: 15px;
-    color: #FFF;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; }
+    color: #FFF; }
     .company_acordeon_item {
-      max-width: 480px;
+      overflow: hidden;
+      max-width: 480px !important;
       background: #019B91;
-      margin-bottom: 15px; }
+      margin: 8px auto; }
       .company_acordeon_item:nth-child(odd) {
         background: #03617A; }
       .company_acordeon_item_title {
@@ -283,7 +280,6 @@ textarea {
           overflow: hidden;
           padding-top: 0; }
           .company_acordeon_item_title div:before {
-            transition: all .3s ease;
             color: #FFF;
             font-size: 0; }
         .company_acordeon_item_title h3 {
@@ -291,16 +287,21 @@ textarea {
           font-weight: 400;
           color: #FFF; }
       .company_acordeon_item_description {
-        transition: all 1s ease;
+        transition: opacity .3s ease;
         opacity: 0;
         overflow: hidden;
         margin: 0;
         height: 0;
         font-size: 1rem; }
         .company_acordeon_item_description_slogan {
-          transition: all 1s ease;
+          transition: opacity .3s ease;
           opacity: 0;
-          font-size: 1.5rem; }
+          font-size: 1.5rem;
+          font-style: italic; }
+    .company_acordeon .left {
+      margin-left: 395px; }
+    .company_acordeon .right {
+      margin-right: 395px; }
     .company_acordeon .visible {
       padding: 5px 20px; }
       .company_acordeon .visible .company_acordeon_item_title {
@@ -319,8 +320,7 @@ textarea {
         opacity: 1;
         margin-bottom: 30px; }
         .company_acordeon .visible .company_acordeon_item_description_slogan {
-          opacity: 1;
-          font-style: italic; }
+          opacity: 1; }
 
 .team {
   background: #29504F;
@@ -659,6 +659,45 @@ a.active {
     .header .contact .btn {
       margin: 0; }
   .header .header_buttons {
-    display: none; } }
+    display: none; }
+
+  .company_acordeon {
+    position: relative;
+    margin: auto;
+    width: 810px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; }
+    .company_acordeon_item {
+      cursor: pointer;
+      margin: 5px;
+      width: 185px;
+      height: 185px;
+      float: left; }
+      .company_acordeon_item_title {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center; }
+
+  .visible {
+    position: absolute;
+    width: 380px;
+    height: 380px; }
+    .visible:nth-child(1), .visible:nth-child(5) {
+      top: 15px;
+      left: 15px; }
+    .visible:nth-child(2), .visible:nth-child(6) {
+      left: 210px;
+      top: 15px; }
+    .visible:nth-child(3), .visible:nth-child(7) {
+      right: 210px;
+      top: 15px; }
+    .visible:nth-child(4), .visible:nth-child(8) {
+      right: 15px;
+      top: 15px; }
+    .visible .company_acordeon_item_title {
+      display: inherit;
+      height: auto; } }
 
 /*# sourceMappingURL=styles.css.map */
