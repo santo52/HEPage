@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <!-- PESTAÑA CONTACTO-->
-      <div class="contact">
+      <div class="contact slideDown">
         <div class="pestana">
           <div>
             <p>contacto</p>
@@ -18,11 +18,11 @@
         </div>
         <div class="labels">
           <div class="labels__close"><a href="#" onClick="return false" style="color:white;">x</a></div>
-          <div class="labels__item">
+         <!-- <div class="labels__item">
             <label for="nombre">Nombre</label>
-            <label for="asunto">Asunto</label>
+            <label for="email">Email</label>
             <label for="mensaje">Mensaje</label>
-          </div>
+          </div>-->
         </div>
         <div style="padding-right: 8.33%;" class="form">
           <div class="form__menu">
@@ -40,7 +40,7 @@
           </div>
           <div class="form__content">
             <form action="" method="POST">
-              <div>
+              <!--<div>
                 <input type="text" name="nombre">
                 <label for="email">Email</label>
                 <input type="text" name="email">
@@ -49,10 +49,32 @@
                 <input type="text" name="asunto">
               </div>
               <div>
-                <textarea name="mensaje" cols="30" rows="10"></textarea>
+                <textarea name="mensaje" cols="30" rows="4"></textarea>
               </div>
               <div>
                 <input type="submit" value="Enviar" style="padding:0; cursor: pointer" class="btn-1">
+              </div>-->
+              <div class="text"><span>Cuéntanos en que podemos ayudarte</span></div>
+              <div>
+                <label for="nombre">
+                  <span>Nombre</span>
+                  <input type="text" name="nombre">
+                </label>
+              </div>
+              <div>
+                <label for="email">
+                  <span>Email</span>
+                  <input type="text" name="email">
+              </label>
+              </div>
+              <div>
+                <label for="mensaje">
+                  <span>Mensaje</span>
+                  <textarea name="mensaje"></textarea>
+                </label>
+              </div>
+              <div>
+                <input type="submit" value="Enviar" style="padding:0; cursor: pointer" class="btn">
               </div>
             </form>
           </div>

@@ -51,3 +51,13 @@ $('.menu .labels').on('click', 'a', function(){
 $('.agencia__team__members__member').hover(function(){
     $(this).children('.icon').stop().slideToggle(300);
 });
+
+var $name = $('.form input, .form textarea');
+
+$name.focus(function() {
+    $(this).parent('label').addClass('open');
+}).blur(function() {
+    if( $.trim($(this).val()) == ""){
+        $(this).parent('label').removeClass('open');
+    }
+});

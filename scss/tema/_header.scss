@@ -15,10 +15,11 @@
   .contact,
   .menu,
   .pestana,
-  .labels,
-  .contact .form,
-  .contact .form__menu,
-  .contact .form__menu__content{
+  .labels
+  //.contact .form,
+  //.contact .form__menu,
+  //.contact .form__menu__content
+  {
     display:flex;
   }
 
@@ -53,7 +54,6 @@
   .contact, .menu{
     width: 100%;
     position: fixed;
-    min-height: 560px;
     height: 100vh;
     color: white;
     top:0;
@@ -89,7 +89,11 @@
 
     .labels{
       align-items: center;
-      padding: 22px;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1.2rem;
     }
   }
 
@@ -153,16 +157,9 @@
     right: -99.5%;
     border-left: 10px solid $color-2;
     background: rgba($color-2, .8);
-    .pestana{
-      right: 35px;
-      border-right: 35px solid $color-2;
 
-      div {
-        margin-left: 35px;
-      }
-    }
     .labels{
-      justify-content:space-between;
+      //justify-content:space-between;
 
       &__close{
         font-size: 35px;
@@ -181,46 +178,47 @@
       }
     }
     .form{
-      flex-direction: column;
-      justify-content: center;
-      flex-grow: 1;
-
-      &__menu{
-        font-size: 13px;
-        font-weight: $normal;
-        flex-direction: column;
-        align-items: center;
-
-        &__content{
-          flex-wrap: wrap;
-          margin: 30px 0;
-
-          li{
-            margin-right: 20px;
-            &:last-child{
-              margin: 0;
-            }
-          }
-        }
+      width:100%;
+      padding: 0 8.33%;
+      display: flex;
+      align-items: center;
+      &__content{
+        width: 100%;
+      }
+      .text{
+        font-size:.9rem;
+        margin-bottom: 20px;
+        font-weight: 100;
+        text-align: center;
       }
 
-      &__content{
-        flex-direction: column;
-        div{
-          margin: 35px 0;
-          display:flex;
-          label{
-            padding:0 3.472222222222222%;
-          }
-          textarea, input{
-            flex-grow: 1;
-          }
-          input.btn-1{
-            flex-grow: 0;
-            min-width: 133px;
-          }
+      label{
+        background: $color-3;
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+
+        input, textarea{
+          position: relative;
+          z-index: 50;
+          background: none;
+        }
+
+        span{
+          transition: all 0.2s ease;
+          position: absolute;
+          color: $color-6;
+          padding: 16px;
+          cursor: text;
         }
       }
     }
   }
+}
+
+.open span {
+  font-size: .83rem;
+  color: #bbbbbb;
+  padding: 6px 16px !important;
 }

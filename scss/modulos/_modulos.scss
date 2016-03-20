@@ -17,3 +17,13 @@ a.active{
     transform: scale(1);
   }
 }
+
+.btn{
+  border: none;
+  background: $color-3;
+  width:auto;
+  padding: .5rem 2.2rem !important;
+  margin: auto;
+  display: inherit;
+  color: $color-2;
+}

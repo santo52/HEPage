@@ -1,8 +1,55 @@
+@media screen and (max-height: 485px) and (max-width: 768px) and (orientation: landscape){
+  .contact, .menu{
+    .labels{
+      padding: 0 10px!important;
+    }
+  }
+  .contact{
+    .form{
+      justify-content: center;
+      flex-direction: column;
+      .text{
+        margin-bottom: 10px !important;
+      }
+      input, textarea{
+        padding-top: 1rem;
+        height: 55px;
+      }
+      label{
+        margin-bottom: 10px !important;
+      }
+      .btn{
+        height: 40px;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .header {
     .contact, .menu {
       .pestana {
         visibility: visible;
+      }
+      .labels{
+        padding: 22px;
+        position: initial;
+      }
+    }
+    .contact{
+      .pestana{
+        right: 35px;
+        border-right: 35px solid $color-2;
+
+        div {
+          margin-left: 35px;
+        }
+      }
+      .text{
+        text-align: left !important;
+      }
+      .btn{
+        margin: 0;
       }
     }
     .header_buttons{
