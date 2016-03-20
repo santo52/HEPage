@@ -3,12 +3,9 @@ $('.company_acordeon_item').on('click', function(){
     $(this).toggleClass('visible');
 });
 
-var $closeTab = $('.tab_close');
 var $headerButtons = $('.header_buttons');
 var $header = $('.header');
 var $document = $(document);
-var $menuButton = $('.menu_button');
-var $contactButton = $('.contact_button');
 
 $document.on('scroll', function(){
     if($document.scrollTop() > $header.height()){
@@ -19,38 +16,42 @@ $document.on('scroll', function(){
     }
 });
 
-var contact = $('.contact');
-var menu = $('.menu');
-
 //***************************//
 //***************************//
 //******** PESTAÑAS *********//
 //***************************//
 //***************************//
 
-$('.contact .pestana').click(function(){
-    contact.css('z-index', '5000').animate({right: "0", border: 0}, 1000);
-    $('html').css('overflow', 'hidden');
+var $menu = $('.menu');
+var $menuButton = $('.menu_button');
+var $contactButton = $('.contact_button');
+var $contact = $('.contact');
+var $pestana = $('.pestana');
+var $close = $('.labels');
+
+$pestana.on('click', function(){
+    $(this).parent().addClass('slideDown');
 });
 
-$('.contact .labels').on('click', 'a', function(){
-    contact.css('z-index', '3000').animate({right: "-99.5%"}, 1000).css('border-left', '10px solid #009B93');
-    $('html').css('overflow-y', 'scroll');
-})
-
-$('.menu .pestana').click(function(){
-    menu.css('z-index', '5000').animate({left: "0", border: 0}, 1000);
-    $('html').css('overflow', 'hidden');
+$menuButton.on('click', function(){
+    $menu.addClass('slideDown');
 });
 
-$('.menu .labels').on('click', 'a', function(){
-    menu.css('z-index', '3000').animate({left: "-99.5%"}, 1000).css('border-right', '10px solid #00637A');
-    $('html').css('overflow-y', 'scroll');
-})
-
-$('.agencia__team__members__member').hover(function(){
-    $(this).children('.icon').stop().slideToggle(300);
+$contactButton.on('click', function(){
+    $contact.addClass('slideDown');
 });
+
+$close.on('click', function(){
+    $(this).parent().removeClass('slideDown');
+});
+
+
+
+//***************************//
+//***************************//
+//********** INPUTS *********//
+//***************************//
+//***************************//
 
 var $name = $('.form input, .form textarea');
 

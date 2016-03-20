@@ -28,6 +28,8 @@
 @media screen and (min-width: 1024px) {
   .header {
     .contact, .menu {
+      transition: left 1s ease;
+      top:0 !important;
       .pestana {
         visibility: visible;
       }
@@ -36,7 +38,11 @@
         position: initial;
       }
     }
+    .menu{
+      left: -99.5%;
+    }
     .contact{
+      left: 99.5%;
       .pestana{
         right: 35px;
         border-right: 35px solid $color-2;

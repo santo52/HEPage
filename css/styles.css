@@ -186,7 +186,9 @@ textarea {
     position: fixed;
     height: 100vh;
     color: white;
-    top: 0; }
+    transition: top 1s ease;
+    top: -100%;
+    left: 0; }
     .header .contact .pestana, .header .menu .pestana {
       visibility: hidden;
       cursor: pointer;
@@ -231,7 +233,6 @@ textarea {
     -webkit-flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    left: -99.5%;
     border-right: 10px solid #03617A;
     background: rgba(3, 97, 122, 0.8); }
     .header .menu .pestana {
@@ -658,44 +659,6 @@ textarea {
     .footer_credits a {
       color: #03617A; }
 
-@media screen and (max-height: 485px) and (max-width: 768px) and (orientation: landscape) {
-  .contact .labels, .menu .labels {
-    padding: 0 10px !important; }
-  .contact .form {
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .contact .form .text {
-      margin-bottom: 10px !important; }
-    .contact .form input, .contact .form textarea {
-      padding-top: 1rem;
-      height: 55px; }
-    .contact .form label {
-      margin-bottom: 10px !important; }
-    .contact .form .btn {
-      height: 40px; } }
-
-@media screen and (min-width: 1024px) {
-  .header .contact .pestana, .header .menu .pestana {
-    visibility: visible; }
-  .header .contact .labels, .header .menu .labels {
-    padding: 22px;
-    position: initial; }
-  .header .contact .pestana {
-    right: 35px;
-    border-right: 35px solid #019B91; }
-    .header .contact .pestana div {
-      margin-left: 35px; }
-  .header .contact .text {
-    text-align: left !important; }
-  .header .contact .btn {
-    margin: 0; }
-  .header .header_buttons {
-    display: none; } }
-
 a.active {
   color: #019B91; }
 
@@ -731,3 +694,54 @@ a.active {
   margin: auto;
   display: inherit;
   color: #019B91; }
+
+.slideDown {
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 7000 !important;
+  border: 0 !important; }
+
+@media screen and (max-height: 485px) and (max-width: 768px) and (orientation: landscape) {
+  .contact .labels, .menu .labels {
+    padding: 0 10px !important; }
+  .contact .form {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .contact .form .text {
+      margin-bottom: 10px !important; }
+    .contact .form input, .contact .form textarea {
+      padding-top: 1rem;
+      height: 55px; }
+    .contact .form label {
+      margin-bottom: 10px !important; }
+    .contact .form .btn {
+      height: 40px; } }
+
+@media screen and (min-width: 1024px) {
+  .header .contact, .header .menu {
+    transition: left 1s ease;
+    top: 0 !important; }
+    .header .contact .pestana, .header .menu .pestana {
+      visibility: visible; }
+    .header .contact .labels, .header .menu .labels {
+      padding: 22px;
+      position: initial; }
+  .header .menu {
+    left: -99.5%; }
+  .header .contact {
+    left: 99.5%; }
+    .header .contact .pestana {
+      right: 35px;
+      border-right: 35px solid #019B91; }
+      .header .contact .pestana div {
+        margin-left: 35px; }
+    .header .contact .text {
+      text-align: left !important; }
+    .header .contact .btn {
+      margin: 0; }
+  .header .header_buttons {
+    display: none; } }

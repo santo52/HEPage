@@ -56,7 +56,9 @@
     position: fixed;
     height: 100vh;
     color: white;
-    top:0;
+    transition: top 1s ease;
+    top:-100%;
+    left: 0;
     .pestana{
       visibility: hidden;
       cursor: pointer;
@@ -101,7 +103,6 @@
 
   .menu{
     flex-direction: row-reverse;
-    left: -99.5%;
     border-right: 10px solid $color-1;
     background: rgba($color-1, .8);
 
