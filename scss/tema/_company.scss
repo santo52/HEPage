@@ -13,7 +13,11 @@
     font-weight:$light;
     padding:15px;
     color: $color-3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     &_item{
+      max-width: 480px;
       background: $color-2;
       margin-bottom:15px;
       &:nth-child(odd){

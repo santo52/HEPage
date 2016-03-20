@@ -66,15 +66,15 @@ textarea {
 
 @font-face {
   font-family: "Icons";
-  src: url("../../fonts/Flaticon.eot");
-  src: url("../../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("../../fonts/Flaticon.woff") format("woff"), url("../../fonts/Flaticon.ttf") format("truetype"), url("../../fonts/Flaticon.svg#Flaticon") format("svg");
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/Flaticon.woff") format("woff"), url("../fonts/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "Flaticon";
-    src: url("../../fonts/Flaticon.svg#Flaticon") format("svg"); } }
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg"); } }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
@@ -308,8 +308,18 @@ textarea {
   .company_acordeon {
     font-weight: 300;
     padding: 15px;
-    color: #FFF; }
+    color: #FFF;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
     .company_acordeon_item {
+      max-width: 480px;
       background: #019B91;
       margin-bottom: 15px; }
       .company_acordeon_item:nth-child(odd) {
