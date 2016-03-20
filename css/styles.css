@@ -578,10 +578,10 @@ textarea {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin: 50px 0 100px;
+    margin: 90px 0 100px;
     background: red url("../img/logos.png") left;
-    -webkit-animation: 10s infinite linear;
-            animation: 10s infinite linear; }
+    -webkit-animation: 30s infinite linear;
+            animation: 30s infinite linear; }
 
 .right {
   -webkit-animation-name: slider-right;

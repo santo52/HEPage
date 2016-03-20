@@ -515,9 +515,9 @@ textarea {
     height: 100px;
     width: 100%;
     display: flex;
-    margin: 50px 0 100px;
+    margin: 90px 0 100px;
     background: red url("../img/logos.png") left;
-    animation: 10s infinite linear; }
+    animation: 30s infinite linear; }
 
 .right {
   animation-name: slider-right; }
