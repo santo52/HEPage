@@ -413,7 +413,8 @@ textarea {
           background-color: #29504F;
           opacity: .90;
           cursor: pointer;
-          top: -35px;
+          top: -50% !important;
+          left: 0 !important;
           visibility: hidden; }
           .team_container_hexagons .hexagon .sub_hexagon_text {
             width: 100%;
@@ -492,6 +493,19 @@ textarea {
         background-image: url("http://lorempixel.com/400/400/people/6");
         top: 300px;
         left: 0; }
+      .team_container_hexagons > .hexagon:nth-child(7) {
+        display: none;
+        border: 1px solid white;
+        border-top: 0;
+        border-bottom: 0; }
+        .team_container_hexagons > .hexagon:nth-child(7) > .hexTop {
+          border: 1px solid white;
+          border-left: 0;
+          border-bottom: 0; }
+        .team_container_hexagons > .hexagon:nth-child(7) > .hexBottom {
+          border: 1px solid white;
+          border-right: 0;
+          border-top: 0; }
 
 .proyects {
   text-align: center;
@@ -863,4 +877,77 @@ a.active {
       top: 15px; }
     .visible .company_acordeon_item_title {
       display: inherit;
-      height: auto; } }
+      height: auto; }
+  .team_container_hexagons {
+    width: 300px;
+    height: 300px; }
+    .team_container_hexagons .hexagon {
+      top: 50% !important;
+      left: 50% !important; }
+    .team_container_hexagons > .hexagon:nth-child(1) {
+      margin-top: -34px;
+      margin-left: -370px; }
+    .team_container_hexagons > .hexagon:nth-child(2) {
+      margin-top: -270px;
+      margin-left: -236px; }
+    .team_container_hexagons > .hexagon:nth-child(3) {
+      margin-top: -270px;
+      margin-left: 36px; }
+    .team_container_hexagons > .hexagon:nth-child(4) {
+      margin-top: -34px;
+      margin-left: 170px; }
+    .team_container_hexagons > .hexagon:nth-child(5) {
+      margin-top: 202px;
+      margin-left: 36px; }
+    .team_container_hexagons > .hexagon:nth-child(6) {
+      margin-top: 202px;
+      margin-left: -236px; }
+    .team_container_hexagons > .hexagon:nth-child(7) {
+      top: 0 !important;
+      left: 0 !important;
+      display: block;
+      width: 300px;
+      height: 173.21px;
+      margin: 86.60px 0;
+      background-size: auto 350.4102px;
+      background-image: url("http://lorempixel.com/400/400/people/9");
+      /*counter transform the bg image on the caps*/ }
+      .team_container_hexagons > .hexagon:nth-child(7) > .hexTop,
+      .team_container_hexagons > .hexagon:nth-child(7) > .hexBottom {
+        position: absolute;
+        z-index: 1;
+        width: 212.13px;
+        height: 212.13px;
+        overflow: hidden;
+        -webkit-transform: scaleY(0.5774) rotate(-45deg);
+        transform: scaleY(0.5774) rotate(-45deg);
+        background: inherit;
+        left: 43.93px; }
+      .team_container_hexagons > .hexagon:nth-child(7) > .hexTop:after,
+      .team_container_hexagons > .hexagon:nth-child(7) > .hexBottom:after {
+        content: "";
+        position: absolute;
+        width: 300.0000px;
+        height: 173.20508075688775px;
+        -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+        transform: rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        background: inherit; }
+      .team_container_hexagons > .hexagon:nth-child(7) > .hexTop {
+        top: -106.0660px; }
+      .team_container_hexagons > .hexagon:nth-child(7) > .hexTop:after {
+        background-position: center top; }
+      .team_container_hexagons > .hexagon:nth-child(7) .hexBottom {
+        bottom: -106.0660px; }
+      .team_container_hexagons > .hexagon:nth-child(7) .hexBottom:after {
+        background-position: center bottom; }
+      .team_container_hexagons > .hexagon:nth-child(7) .hexagon:after {
+        content: "";
+        position: absolute;
+        top: 0.0000px;
+        left: 0;
+        width: 300.0000px;
+        height: 173.2051px;
+        z-index: 2;
+        background: inherit; } }

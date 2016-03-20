@@ -46,6 +46,7 @@
     &_hexagons {
       width: 200px;
       height: 200px;
+
       .hexagon {
         width: 200px;
         height: 115.47px;
@@ -266,6 +267,116 @@
     .company_acordeon_item_title{
       display: inherit;
       height: auto;
+    }
+  }
+
+  $marginTop:-34;
+  $marginLeft:-100;
+  .team {
+    &_container_hexagons{
+      width: 300px;
+      height:300px;
+
+      .hexagon{
+        top:50% !important;
+        left:50% !important;
+      }
+      > .hexagon:nth-child(1) {
+        margin-top: $marginTop + px;
+        margin-left: ($marginLeft - 270) + px;
+      }
+
+      > .hexagon:nth-child(2) {
+        margin-top: ($marginTop - 236) + px;
+        margin-left: ($marginLeft - 136) + px;
+      }
+
+      > .hexagon:nth-child(3) {
+        margin-top: ($marginTop - 236) + px;
+        margin-left: ($marginLeft + 136) + px;
+      }
+
+      > .hexagon:nth-child(4) {
+        margin-top: $marginTop + px;
+        margin-left: ($marginLeft + 270) + px;
+      }
+
+      > .hexagon:nth-child(5) {
+        margin-top: ($marginTop + 236) + px;
+        margin-left: ($marginLeft + 136) + px;
+      }
+
+      > .hexagon:nth-child(6) {
+        margin-top: ($marginTop + 236) + px;
+        margin-left: ($marginLeft - 136) + px;
+      }
+
+      > .hexagon:nth-child(7) {
+        top:0 !important;
+        left:0 !important;
+        display: block;
+        width: 300px;
+        height: 173.21px;
+        margin: 86.60px 0;
+        background-size: auto 346.4102px;
+
+        >.hexTop,
+        >.hexBottom {
+          position: absolute;
+          z-index: 1;
+          width: 212.13px;
+          height: 212.13px;
+          overflow: hidden;
+          -webkit-transform: scaleY(0.5774) rotate(-45deg);
+          -ms-transform: scaleY(0.5774) rotate(-45deg);
+          transform: scaleY(0.5774) rotate(-45deg);
+          background: inherit;
+          left: 43.93px;
+        }
+
+        /*counter transform the bg image on the caps*/
+        >.hexTop:after,
+        >.hexBottom:after {
+          content: "";
+          position: absolute;
+          width: 300.0000px;
+          height: 173.20508075688775px;
+          -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+          -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+          transform:          rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+          -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+          background: inherit;
+        }
+
+        >.hexTop {
+          top: -106.0660px;
+        }
+
+        >.hexTop:after {
+          background-position: center top;
+        }
+
+        .hexBottom {
+          bottom: -106.0660px;
+        }
+
+        .hexBottom:after {
+          background-position: center bottom;
+        }
+
+        .hexagon:after {
+          content: "";
+          position: absolute;
+          top: 0.0000px;
+          left: 0;
+          width: 300.0000px;
+          height: 173.2051px;
+          z-index: 2;
+          background: inherit;
+        }
+      }
     }
   }
 }
