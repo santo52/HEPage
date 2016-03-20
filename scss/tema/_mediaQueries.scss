@@ -25,13 +25,64 @@
   }
 }
 
+@media screen and (min-width: 400px) and (min-height: 590px){
+  .menu{
+    .items{
+      max-width: 717px !important;
+      .item{
+        width: 140px !important;
+        height: 140px !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .menu{
+    .items{
+      max-width: 780px !important;
+      .item{
+        width: 170px !important;
+        height: 170px !important;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .header {
     .contact, .menu {
+      overflow: visible;
       transition: left 1s ease;
       top:0 !important;
       .pestana {
-        visibility: visible;
+        visibility: visible !important;
+        cursor: pointer;
+        height: 385px;
+        font-weight: $semi-bold;
+        line-height: 1.1em;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        position: relative;
+        border-top: 35px solid transparent;
+        border-bottom: 35px solid transparent;
+        width: 0;
+
+        div{
+          width: 13px;
+          text-transform: uppercase;
+          word-wrap: break-word;
+          text-align: center;
+          p{
+            line-height: 1.2;
+          }
+
+          &:focus{
+            outline: none;
+          }
+        }
       }
       .labels{
         padding: 22px;
@@ -39,9 +90,20 @@
       }
     }
     .menu{
+      border-right: 10px solid $color-1;
       left: -99.5%;
+      .pestana{
+        left: 35px;
+        flex-direction: column;
+        border-left: 35px solid $color-1;
+
+        div {
+          margin-right: 37px;
+        }
+      }
     }
     .contact{
+      border-left: 10px solid $color-2;
       left: 99.5%;
       .pestana{
         right: 35px;
