@@ -31,7 +31,6 @@
           overflow: hidden;
           padding-top: 0;
           &:before{
-            //transition:all .1s ease;
             color: $color-3;
             font-size: 0;
           }
@@ -58,10 +57,10 @@
       }
     }
     .left{
-      margin-left: 395px;
+      margin-left: 460px;
     }
     .right{
-      margin-right: 395px;
+      margin-right: 460px;
     }
     .visible{
       padding: 5px 20px;

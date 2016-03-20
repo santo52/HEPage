@@ -124,21 +124,21 @@
       display: none;
     }
   }
-  $width : 185px;
+  $width : 200px;
   .company{
     &_acordeon{
       position: relative;
       margin: auto;
-      width: 810px;
+      width: 926px;
       overflow: hidden;
       display: flex;
       flex-wrap: wrap;
 
       &_item{
         cursor: pointer;
-        margin: 5px;
-        width: 185px;
-        height: 185px;
+        margin: 12px;
+        width: $width;
+        height: $width;
         float: left;
 
         &_title{
@@ -149,22 +149,29 @@
         }
       }
     }
+    &_description{
+      &_text {
+        margin: auto;
+        padding: 0 25px;
+        max-width: 1100px;
+      }
+    }
   }
   .visible{
     position: absolute;
-    width: $width * 2 + 10;
-    height: $width * 2 + 10;
+    width: $width * 2 + 24;
+    height: $width * 2 + 24;
 
     &:nth-child(1),&:nth-child(5){
       top:15px;
       left: 15px;
     }
     &:nth-child(2), &:nth-child(6){
-      left: 210px;
+      left: 240px;
       top:15px;
     }
     &:nth-child(3), &:nth-child(7){
-      right: 210px;
+      right: 240px;
       top:15px;
     }
     &:nth-child(4), &:nth-child(8){
