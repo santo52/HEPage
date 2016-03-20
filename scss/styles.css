@@ -274,21 +274,20 @@ textarea {
       .company_acordeon_item:nth-child(odd) {
         background: #03617A; }
       .company_acordeon_item_title {
-        transition: all .5s ease;
         cursor: pointer;
         padding: .5em; }
         .company_acordeon_item_title div {
-          transition: all .5s ease;
+          transition: all .3s ease;
           font-size: 0;
           height: 0;
           overflow: hidden;
           padding-top: 0; }
           .company_acordeon_item_title div:before {
-            transition: all .5s ease;
+            transition: all .3s ease;
             color: #FFF;
             font-size: 0; }
         .company_acordeon_item_title h3 {
-          transition: all 1s linear;
+          transition: all .3s linear;
           font-weight: 400;
           color: #FFF; }
       .company_acordeon_item_description {
@@ -300,32 +299,26 @@ textarea {
         font-size: 1rem; }
         .company_acordeon_item_description_slogan {
           transition: all 1s ease;
-          font-size: 0;
-          opacity: 0; }
+          opacity: 0;
+          font-size: 1.5rem; }
     .company_acordeon .visible {
       padding: 5px 20px; }
       .company_acordeon .visible .company_acordeon_item_title {
-        transition: all .5s ease;
         font-size: 1.7rem;
         line-height: 2.5rem; }
         .company_acordeon .visible .company_acordeon_item_title div {
-          transition: all 1s ease;
           padding-top: 10px;
           height: auto;
           margin-bottom: 0.5rem; }
           .company_acordeon .visible .company_acordeon_item_title div:before {
-            transition: all 1s ease;
             font-size: 4rem; }
         .company_acordeon .visible .company_acordeon_item_title h3 {
-          transition: all 1s ease; }
+          font-size: 1.6rem; }
       .company_acordeon .visible .company_acordeon_item_description {
-        transition: all 1s ease;
         height: auto;
         opacity: 1;
         margin-bottom: 30px; }
         .company_acordeon .visible .company_acordeon_item_description_slogan {
-          transition: all 1s ease;
-          font-size: 1.5rem;
           opacity: 1;
           font-style: italic; }
 
