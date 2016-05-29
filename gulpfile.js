@@ -1,124 +1,59 @@
-'use strict';
-
-/**
- * Dependencias
- */
 var gulp = require('gulp'),
+    minify = require('gulp-minifier'),
     plumber = require('gulp-plumber'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
-    sass = require('gulp-sass'),
-    jade = require('gulp-jade'),
-    connect = require('gulp-connect');
-
-/**
- * Variable de entorno.
- * En la terminal se puede definir de manera opcional el puerto para cualquiera
- * de las tareas watch, un ejemplo de uso sería:
- * PORT=8080 gulp watch:all
- */
- var PORT = process.env.PORT || 8080;
+    sass = require('gulp-sass');
 
 
-/**
- * Compila los archivos sass hijos directos de la carpeta `scss/`.
- * Agrega los prefijos propietarios de los navegadores.
- * Los archivos CSS generados se guardan en la carpeta `css/`.
- */
+gulp.task('default', function(){
+    gulp.watch('./scss/**', ['sass']);
+});
+
+/*********** Leer Sass **************/
+
 gulp.task('sass', function () {
-  var processors = [
-    autoprefixer({ browsers: ['last 2 versions'] })
-  ];
+    var processors = [
+        autoprefixer({ browsers: ['last 2 versions'] })
+    ];
 
-  return gulp.src('./scss/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(plumber())
-    .pipe(postcss(processors))
-    .pipe(gulp.dest('./css'))
-    .pipe(connect.reload());
+    return gulp.src('scss/styles.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(plumber())
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./css'));
 });
 
+/*********** Comprimir archivos **************/
 
-/**
- * Compila los archivos jade hijos directos de la carpeta `jade/`.
- * Los archivos HTML generados se guardan en la carpeta raíz del proyecto.
- */
-gulp.task('jade', function() {
-  gulp.src('./jade/*.jade')
-    .pipe(plumber())
-    .pipe(jade({
-      pretty: true
-    }))
-    .pipe(gulp.dest('./'))
-    .pipe(connect.reload());
+var minifyConf = {
+    minify: true,
+    collapseWhitespace: true,
+    conservativeCollapse: true,
+    minifyJS: true,
+    minifyCSS: true,
+    getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+    }
+};
+
+gulp.task('compress', ['compress:html','compress:css','compress:js']);
+
+gulp.task('compress:html', function() {
+    gulp.src('*.html')
+        .pipe(minify(minifyConf))
+        .pipe(gulp.dest('compressed'));
 });
 
-
-/**
- * Recarga el HTML en el navegador.
- * Creado para quienes no usen Jade.
- */
-gulp.task('html', function () {
-  gulp.src('./*.html')
-    .pipe(connect.reload());
+gulp.task('compress:js', function() {
+    gulp.src('js/*.js')
+        .pipe(minify(minifyConf))
+        .pipe(gulp.dest('compressed/js'));
 });
 
-
-/**
- * Crea un servidor local livereload
- * http://localhost:7070
- */
-gulp.task('connect', function() {
-  connect.server({
-    // root: '.',
-    port: PORT,
-    livereload: true
-  });
+gulp.task('compress:css', function() {
+    gulp.src('css/*.css')
+        .pipe(minify(minifyConf))
+        .pipe(gulp.dest('compressed/css'));
 });
-
-
-/**
- * Ejecuta las tareas connect y sass, queda escuchando los cambios de todos
- * los archivos Sass de la carpeta `scss/` y subcarpetas.
- */
-gulp.task('watch:sass', ['connect', 'sass'], function () {
-  gulp.watch('./scss/**/*.scss', ['sass']);
-});
-
-
-/**
- * Ejecuta las tareas connect y jade, queda escuchando los cambios de todos
- * los archivos jade de la carpeta `jade/` y subcarpetas.
- */
-gulp.task('watch:jade', ['connect', 'jade'], function () {
-  gulp.watch('./jade/**/*.jade', ['jade']);
-});
-
-
-/**
- * Ejecuta las tareas connect y html, queda escuchando los cambios de todos
- * los archivos HTML de la carpeta raíz del proyecto.
- * Creado para quienes no usen Jade.
- */
-gulp.task('watch:html', ['connect', 'html'], function () {
-  gulp.watch('./*.html', ['html']);
-});
-
-
-/**
- * Ejecuta las tareas watch:html y watch:sass
- * Creado para quienes no usen Jade.
- */
-gulp.task('watch:html-sass', ['watch:html', 'watch:sass']);
-
-
-/**
- * Ejecuta las tareas watch:sass y watch:jade.
- */
-gulp.task('watch:all', ['watch:sass', 'watch:html']);
-
-
-/**
- * Ejecuta la tarea watch:sass.
- */
-gulp.task('default', ['watch:sass']);
