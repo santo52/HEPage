@@ -173,6 +173,7 @@ textarea {
         .header_buttons_item:hover:before {
           color: #019B91; }
   .header .contact, .header .menu {
+    z-index: 1000;
     width: 100%;
     position: fixed;
     height: 100vh;
@@ -277,6 +278,7 @@ textarea {
   padding: 6px 16px !important; }
 
 .company {
+  background: white;
   text-align: center; }
   .company_description {
     padding: 30px;
